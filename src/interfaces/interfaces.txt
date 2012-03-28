@@ -1,0 +1,18 @@
+Interfaces:
+org.scubaguy.facelook.boardloader.BoardLoader
+org.scubaguy.facelook.rules.rule
+org.scubaguy.facelook.runner.BoardRunner
+org.scubaguy.facelook.UI.views.View
+org.scubaguy.facelook.UI.CellRenderer
+
+Examples:
+org.scubaguy.automata.loaders.*
+org.scubaguy.automata.renderers.*
+org.scubaguy.automata.rules.*
+org.scubaguy.automata.runners.*
+org.scubaguy.automata.views.*
+
+as well as
+
+../../golPlug/src/GameOfLife.java
+../../wirePlug/src/Wireworld.java

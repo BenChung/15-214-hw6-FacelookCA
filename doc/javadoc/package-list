@@ -1,0 +1,13 @@
+org.scubaguy.facelook
+org.scubaguy.facelook.UI
+org.scubaguy.facelook.UI.views
+org.scubaguy.facelook.automata.loaders
+org.scubaguy.facelook.automata.renderers
+org.scubaguy.facelook.automata.rules
+org.scubaguy.facelook.automata.runners
+org.scubaguy.facelook.automata.views
+org.scubaguy.facelook.boardloaders
+org.scubaguy.facelook.boards
+org.scubaguy.facelook.exceptions
+org.scubaguy.facelook.rules
+org.scubaguy.facelook.runners
