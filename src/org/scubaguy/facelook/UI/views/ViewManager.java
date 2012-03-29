@@ -1,6 +1,7 @@
 package org.scubaguy.facelook.UI.views;
 
 import org.scubaguy.facelook.UI.CellRenderer;
+import org.scubaguy.facelook.automata.views.BitmapView;
 import org.scubaguy.facelook.automata.views.SwingView;
 
 import java.util.LinkedList;
@@ -18,7 +19,7 @@ public final class ViewManager {
     }
     private ViewManager() {
         addView(SwingView.getFactory());
-
+        addView(BitmapView.getFactory());
     }
                              
     private LinkedList<ViewFactory> factories = new LinkedList<ViewFactory>();

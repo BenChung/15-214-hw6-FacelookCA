@@ -1,5 +1,6 @@
 import org.scubaguy.facelook.CellularAutomata;
 import org.scubaguy.facelook.UI.CADialog;
+import org.scubaguy.facelook.automata.views.BitmapView;
 import org.scubaguy.facelook.automata.views.SwingView;
 import org.scubaguy.facelook.boardloaders.BoardLoader;
 import org.scubaguy.facelook.boardloaders.BoardLoaderRepository;
@@ -69,6 +70,24 @@ public class Wireworld {
             return (board.getState(cellX, cellY)+1)%4;
         }
     }
+    private static class WireImageRenderer
+        implements BitmapView.BitmapCellRenderer {
+
+        @Override
+        public void drawCell(BitmapView target, Board source, int x, int y) {
+            int state = source.getState(x, y);
+            int color = 0;
+            if (state == EMPTY)
+                color = Color.BLACK.getRGB();
+            else if (state == CONDUCTOR)
+                color = Color.YELLOW.getRGB();
+            else if (state == ELECTRON_HEAD)
+                color = Color.BLUE.getRGB();
+            else if (state == ELECTRON_TAIL)
+                color = Color.RED.getRGB();
+            target.drawPixel(color, x , y);
+        }
+    }
     public static class WireLoader implements BoardLoader {
         @Override
         public EditableBoard getBoard(InputStream input) throws InvalidFileFormatException {
@@ -116,7 +135,7 @@ public class Wireworld {
     public static void main(String[] args) {
         BoardLoaderRepository.getInstance().addBoardLoader(new WireLoader());
         CellularAutomata ca = new CellularAutomata(BoardLoaderRepository.getInstance().getBoardFromFile("primes.wi"), new WireRule());
-        CADialog cap = new CADialog(ca, new WireRenderer());
+        CADialog cap = new CADialog(ca, new WireImageRenderer());
         cap.show();
     }
 }
