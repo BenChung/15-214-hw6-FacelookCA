@@ -1,6 +1,6 @@
 package org.scubaguy.facelook.runners;
 
-import org.scubaguy.facelook.CellularAutomata;
+import org.scubaguy.facelook.core.CellularAutomata;
 import org.scubaguy.facelook.rules.Rule;
 
 /**

@@ -41,6 +41,10 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Ben Chung\workspace\hw6\coverage" />
+  </component>
   <component name="IdProvider" IDEtalkID="273A66BBF0E5BA3E4CDBE86A3D051B2A" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/jDoc" />
@@ -182,9 +186,9 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/golPlug/golPlug.iml" filepath="$PROJECT_DIR$/golPlug/golPlug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GPURunner/GPURunner.iml" filepath="$PROJECT_DIR$/GPURunner/GPURunner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exampleView/exampleView.iml" filepath="$PROJECT_DIR$/exampleView/exampleView.iml" />
       <module fileurl="file://$PROJECT_DIR$/hw6.iml" filepath="$PROJECT_DIR$/hw6.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wirePlug/wirePlug.iml" filepath="$PROJECT_DIR$/wirePlug/wirePlug.iml" />
     </modules>
   </component>
   <component name="ProjectResources">

@@ -1,9 +1,8 @@
 package org.scubaguy.facelook.runners;
 
-import org.scubaguy.facelook.CellularAutomata;
+import org.scubaguy.facelook.core.CellularAutomata;
 import org.scubaguy.facelook.automata.runners.MTBoardRunner;
 import org.scubaguy.facelook.automata.runners.SimpleRunner;
-import org.scubaguy.facelook.boards.Board;
 import org.scubaguy.facelook.rules.Rule;
 
 import java.util.PriorityQueue;
@@ -13,6 +12,8 @@ import java.util.PriorityQueue;
  * @author Benjamin Chung, Hank Zwally, Cory Williams
  */
 public class BoardRunnerRepository {
+
+
     private static BoardRunnerRepository instance;
     public static BoardRunnerRepository getInstance() {
         if (instance == null)
@@ -33,6 +34,8 @@ public class BoardRunnerRepository {
      * @param runner The runner factory to add
      */
     public void addRunnerFactory(RunnerFactory runner) {
+        if (runner == null)
+            throw new IllegalArgumentException("Runner null");
         runners.add(runner);
     }
 

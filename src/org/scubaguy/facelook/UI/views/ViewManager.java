@@ -25,6 +25,8 @@ public final class ViewManager {
     private LinkedList<ViewFactory> factories = new LinkedList<ViewFactory>();
 
     public void addView(ViewFactory view) {
+        if (view == null)
+            throw new IllegalArgumentException();
         factories.add(view);
     }
 

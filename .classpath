@@ -4,5 +4,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="golPlug/src"/>
 	<classpathentry kind="src" path="wirePlug/src"/>
+	<classpathentry kind="src" path="src/org/scubaguy/facelook/tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/-4.10.jar"/>
 	<classpathentry kind="output" path="out/production/hw6"/>
 </classpath>

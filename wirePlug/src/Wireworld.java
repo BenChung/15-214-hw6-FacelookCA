@@ -1,5 +1,6 @@
-import org.scubaguy.facelook.CellularAutomata;
+import org.scubaguy.facelook.core.CellularAutomata;
 import org.scubaguy.facelook.UI.CADialog;
+import org.scubaguy.facelook.automata.runners.MTBoardRunner;
 import org.scubaguy.facelook.automata.views.BitmapView;
 import org.scubaguy.facelook.automata.views.SwingView;
 import org.scubaguy.facelook.boardloaders.BoardLoader;
@@ -10,6 +11,7 @@ import org.scubaguy.facelook.boards.EditableBoard;
 import org.scubaguy.facelook.exceptions.InvalidFileFormatException;
 import org.scubaguy.facelook.rules.ThreadableRule;
 import org.scubaguy.facelook.rules.Util;
+import org.scubaguy.facelook.runners.BoardRunnerRepository;
 
 import java.awt.*;
 import java.io.*;
@@ -40,7 +42,7 @@ public class Wireworld {
             else if (state == ELECTRON_TAIL) {
                 return CONDUCTOR;
             }
-            return 0;  //To change body of implemented methods use File | Settings | File Templates.
+            return 0;
         }
 
     }
@@ -133,6 +135,7 @@ public class Wireworld {
     }
 
     public static void main(String[] args) {
+        BoardRunnerRepository.getInstance().addRunnerFactory(MTBoardRunner.getFactory());
         BoardLoaderRepository.getInstance().addBoardLoader(new WireLoader());
         CellularAutomata ca = new CellularAutomata(BoardLoaderRepository.getInstance().getBoardFromFile("primes.wi"), new WireRule());
         CADialog cap = new CADialog(ca, new WireImageRenderer());

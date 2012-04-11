@@ -7,6 +7,8 @@ import org.scubaguy.facelook.boards.Board;
  * @author Benjamin Chung, Hank Zwally, Cory Williams
  */
 public class Util {
+    public Util() {}
+
     /**
      * Looks for neighboring cells with the given state.
      * @param board The board to look in

@@ -1,6 +1,6 @@
 package org.scubaguy.facelook.UI;
 
-import org.scubaguy.facelook.CellularAutomata;
+import org.scubaguy.facelook.core.CellularAutomata;
 import org.scubaguy.facelook.UI.views.View;
 import org.scubaguy.facelook.UI.views.ViewManager;
 import org.scubaguy.facelook.boards.EditableBoard;

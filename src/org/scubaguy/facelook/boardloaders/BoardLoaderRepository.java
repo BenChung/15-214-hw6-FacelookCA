@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 
 /**
- * This class keeps track of the avaliable file format parsers and calls the appropriate one for the format, based on extension or explict definition
+ * This class keeps track of the avaliable file format parsers and calls the appropriate one for the format, based on extension or explicit request
  * @author Benjamin Chung, Hank Zwally, Cory Williams
  */
 public final class BoardLoaderRepository {
@@ -25,6 +25,8 @@ public final class BoardLoaderRepository {
     
 
     public void addBoardLoader(BoardLoader loader) {
+        if (loader == null)
+            throw new IllegalArgumentException();
         for (String extension : loader.getSupportedExtensions()) {
             if (loaders.containsKey(extension))
                 throw new RuntimeException("Invalid extension: "+extension);

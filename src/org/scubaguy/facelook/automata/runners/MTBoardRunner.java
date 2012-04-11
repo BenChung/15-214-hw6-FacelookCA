@@ -1,6 +1,6 @@
 package org.scubaguy.facelook.automata.runners;
 
-import org.scubaguy.facelook.CellularAutomata;
+import org.scubaguy.facelook.core.CellularAutomata;
 import org.scubaguy.facelook.rules.Rule;
 import org.scubaguy.facelook.boards.Board;
 import org.scubaguy.facelook.boards.EditableBoard;
