@@ -1,0 +1,194 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CellularAutomata</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">org.scubaguy.facelook.core</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CellularAutomata (org.scubaguy.facelook.core)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CellularAutomata</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (31/ 31)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package org.scubaguy.facelook.core;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.scubaguy.facelook.runners.BoardRunner;
+<i>4</i>&nbsp;import org.scubaguy.facelook.runners.BoardRunnerRepository;
+<i>5</i>&nbsp;import org.scubaguy.facelook.runners.RunnerFactory;
+<i>6</i>&nbsp;import org.scubaguy.facelook.boards.ConcreteEditableBoard;
+<i>7</i>&nbsp;import org.scubaguy.facelook.boards.EditableBoard;
+<i>8</i>&nbsp;import org.scubaguy.facelook.rules.Rule;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import java.util.PriorityQueue;
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;/**
+<i>13</i>&nbsp; * This class is a Cellular Automata. Provided with a Rule and dimensions, it can execute the rule across a board.
+<i>14</i>&nbsp; * 
+<i>15</i>&nbsp; */
+<i>16</i>&nbsp;public class CellularAutomata {
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    private Rule rule;
+<i>19</i>&nbsp;    private BoardRunner runner;
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;    private EditableBoard top;
+<i>22</i>&nbsp;    private EditableBoard bottom;
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    /**
+<i>25</i>&nbsp;     * Gets the width of the automata
+<i>26</i>&nbsp;     * @return The width
+<i>27</i>&nbsp;     */
+<i>28</i>&nbsp;    public int getWidth() {
+<b class="fc"><i>29</i>&nbsp;        return top.getWidth();</b>
+<i>30</i>&nbsp;    }
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    /**
+<i>33</i>&nbsp;     * Gets the height of the automata
+<i>34</i>&nbsp;     * @return The height
+<i>35</i>&nbsp;     */
+<i>36</i>&nbsp;    public int getHeight() {
+<b class="fc"><i>37</i>&nbsp;        return top.getHeight();</b>
+<i>38</i>&nbsp;    }
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    private void SetupRunner() {
+<b class="fc"><i>41</i>&nbsp;        runner = BoardRunnerRepository.getInstance().getRunnerForRule(this, rule);</b>
+<b class="fc"><i>42</i>&nbsp;        if (runner == null)</b>
+<b class="fc"><i>43</i>&nbsp;            throw new RuntimeException(&quot;No valid runner found!&quot;);</b>
+<b class="fc"><i>44</i>&nbsp;    }</b>
+<i>45</i>&nbsp;    /**
+<i>46</i>&nbsp;     * Creates a new Cellular automata with specified width and height. The created cells will be in the 0 state.
+<i>47</i>&nbsp;     * @param width The width of the new board
+<i>48</i>&nbsp;     * @param height The height of the board
+<i>49</i>&nbsp;     * @param rule The Automata rule
+<i>50</i>&nbsp;     */
+<b class="fc"><i>51</i>&nbsp;    public CellularAutomata(int width, int height, Rule rule){</b>
+<b class="fc"><i>52</i>&nbsp;        this.rule = rule;</b>
+<i>53</i>&nbsp;
+<b class="fc"><i>54</i>&nbsp;        top = new ConcreteEditableBoard(width, height);</b>
+<b class="fc"><i>55</i>&nbsp;        bottom = new ConcreteEditableBoard(width, height);</b>
+<b class="fc"><i>56</i>&nbsp;        SetupRunner();</b>
+<b class="fc"><i>57</i>&nbsp;    }</b>
+<i>58</i>&nbsp;
+<i>59</i>&nbsp;    /**
+<i>60</i>&nbsp;     * Creates a new Cellular automata with specified states
+<i>61</i>&nbsp;     * @param states A array of beginning states
+<i>62</i>&nbsp;     * @param rule The Automata rule
+<i>63</i>&nbsp;     */
+<b class="fc"><i>64</i>&nbsp;    public CellularAutomata(int[][] states, Rule rule){</b>
+<i>65</i>&nbsp;
+<b class="fc"><i>66</i>&nbsp;        this.rule = rule;</b>
+<i>67</i>&nbsp;
+<b class="fc"><i>68</i>&nbsp;        top = new ConcreteEditableBoard(states);</b>
+<b class="fc"><i>69</i>&nbsp;        bottom = new ConcreteEditableBoard(states);</b>
+<b class="fc"><i>70</i>&nbsp;        SetupRunner();</b>
+<b class="fc"><i>71</i>&nbsp;    }</b>
+<i>72</i>&nbsp;
+<i>73</i>&nbsp;    /**
+<i>74</i>&nbsp;     * Creates a new Cellular Automata from an existing board.
+<i>75</i>&nbsp;     * @param board The board to use
+<i>76</i>&nbsp;     * @param rule  The rule
+<i>77</i>&nbsp;     */
+<b class="fc"><i>78</i>&nbsp;    public CellularAutomata(EditableBoard board,Rule rule) {</b>
+<b class="fc"><i>79</i>&nbsp;        this.rule = rule;</b>
+<b class="fc"><i>80</i>&nbsp;        top = board;</b>
+<b class="fc"><i>81</i>&nbsp;        bottom = ConcreteEditableBoard.cloneBoard(board);</b>
+<b class="fc"><i>82</i>&nbsp;        SetupRunner();</b>
+<b class="fc"><i>83</i>&nbsp;    }</b>
+<i>84</i>&nbsp;    
+<i>85</i>&nbsp;
+<i>86</i>&nbsp;    /**
+<i>87</i>&nbsp;     * Gets the top board
+<i>88</i>&nbsp;     * @return The top board
+<i>89</i>&nbsp;     */
+<i>90</i>&nbsp;    public EditableBoard getTop() {
+<b class="fc"><i>91</i>&nbsp;        return top;</b>
+<i>92</i>&nbsp;    }
+<i>93</i>&nbsp;
+<i>94</i>&nbsp;    /**
+<i>95</i>&nbsp;     * Gets the bottom board
+<i>96</i>&nbsp;     * @return the bottom board
+<i>97</i>&nbsp;     */
+<i>98</i>&nbsp;    public EditableBoard getBottom() {
+<b class="fc"><i>99</i>&nbsp;        return bottom;</b>
+<i>100</i>&nbsp;    }
+<i>101</i>&nbsp;
+<i>102</i>&nbsp;    /**
+<i>103</i>&nbsp;     * Run the simulation one frame.
+<i>104</i>&nbsp;     */
+<i>105</i>&nbsp;    public void tick() {
+<b class="fc"><i>106</i>&nbsp;        runner.tick();</b>
+<b class="fc"><i>107</i>&nbsp;        EditableBoard temp = top;</b>
+<b class="fc"><i>108</i>&nbsp;        top = bottom;</b>
+<b class="fc"><i>109</i>&nbsp;        bottom = temp;</b>
+<b class="fc"><i>110</i>&nbsp;    }</b>
+<i>111</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2012-04-02 08:16</div>
+</div>
+</body>
+</html>

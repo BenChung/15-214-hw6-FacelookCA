@@ -5,6 +5,11 @@
     <option name="SCOPE_TYPE" value="4" />
     <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
   </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="hw6" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d598b29f-cd8d-4c33-822a-526b04fdd4c9" name="Default" comment="" />
     <ignored path="hw6.iws" />
@@ -175,10 +180,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GOL.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GOL.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/automata/rules/GOL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="281" selection-end="287" vertical-scroll-proportion="0.30722892">
               <folding />
             </state>
           </provider>
@@ -202,10 +207,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testForeach.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="testForeach.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Documents/testForeach.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="20" selection-start="196" selection-end="196" vertical-scroll-proportion="0.2109929">
+            <state line="7" column="20" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameOfLife.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/golPlug/src/GameOfLife.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="8" selection-start="408" selection-end="642" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MCell.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/automata/rules/MCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardRunnerRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/runners/BoardRunnerRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="432" selection-end="469" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -258,10 +290,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="367" />
-    <option name="y" value="20" />
-    <option name="width" value="1553" />
-    <option name="height" value="1007" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -772,8 +803,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="367" y="20" width="1553" height="1007" extended-state="0" />
-    <editor active="false" />
+    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.71672356" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -781,16 +812,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37997726" sideWeight="0.6723586" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2930622" sideWeight="0.39691067" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3240418" sideWeight="0.6339286" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.71672356" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.3655283" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3240418" sideWeight="0.35825893" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20010673" sideWeight="0.20136519" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.71672356" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967984" sideWeight="0.71672356" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25654802" sideWeight="0.7069378" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4263393" sideWeight="0.6759582" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29220024" sideWeight="0.5983882" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.66439134" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -910,11 +941,6 @@
         <state line="17" column="45" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/golPlug/src/GameOfLife.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="342" selection-end="342" vertical-scroll-proportion="0.063432835" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exampleView/src/BinaryView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" />
@@ -923,11 +949,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/rules/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="43" selection-start="571" selection-end="592" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/automata/rules/GOL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/automata/runners/SimpleRunner.java">
@@ -947,7 +968,35 @@
     </entry>
     <entry file="file://$USER_HOME$/Documents/testForeach.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="20" selection-start="196" selection-end="196" vertical-scroll-proportion="0.2109929">
+        <state line="7" column="20" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/runners/BoardRunnerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="432" selection-end="469" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/golPlug/src/GameOfLife.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="8" selection-start="408" selection-end="642" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/automata/rules/MCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/scubaguy/facelook/automata/rules/GOL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="281" selection-end="287" vertical-scroll-proportion="0.30722892">
           <folding />
         </state>
       </provider>
@@ -958,7 +1007,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>FacelookCA</last-edited>
+          <last-edited>hw6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

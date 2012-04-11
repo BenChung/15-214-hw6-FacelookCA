@@ -1,0 +1,92 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float} 
+ 
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\lstset{language=Java,
+basicstyle=\small,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+numbers=left,
+numberstyle=\small\color{black},
+stepnumber=1,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+\title{\includegraphics[scale=.35]{FacelookCALogo.pdf}\\
+The Cellular Automata Framework for
+the Next Generation}
+\author{Benjamin Chung, Hank Zwally, Cory Williams}
+\usetheme[height=7mm]{Rochester}
+\begin{document}
+\maketitle
+\begin{frame}{Introduction}
+\begin{itemize}
+  \item FacelookCA is designed to be fast, easy, and expandable, while still providing
+great features.
+\item FacelookCA includes many components that you would otherwise have to
+write
+\item FacelookCA supports multi-threaded execution and other advanced features,
+while still providing a simple easy-to-use interface.
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Rules}
+As a plugin developer, your main task is to write rules. FacelookCA was designed
+with just this in mind. To implement a rule, you write just one function.
+\begin{exampleblock}{Game of life in 12 lines}
+\begin{lstlisting}
+@Override
+public int getState(Board board, int x, int y) {
+    int neighbors = 
+        Utils.getNeighborsWithState(board, 1, x, y);
+    int state = board.getState(x, y);
+    if (state == 0 && neighbors == 3) 
+        return 1;
+    if (state == 1 && 
+        (neighbors == 2 || neighbors == 3))
+        return 1;
+    return 0;
+}
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+\begin{frame}{Runners}
+A runner is how your rule meets the board. FacelookCA comes with 2 runners. Via
+the runner system, FacelookCA offers spectacular speed with little effort on the part of the rule developer.
+\begin{itemize}
+  \item SimpleRunner - Runs the cellular automata is a single thread.
+  \item MTBoardRunner - Multithreaded runner, same interface!
+\end{itemize}
+\end{frame}
+\begin{frame}{Views}
+FacelookCA provides a hugely expandable and easy to use system of views. A cell
+renderer can render whatever it wants to a Swing panel, or very quickly to a
+bitmap.
+
+\begin{itemize}
+  \item Swing - 2 FPS
+  \item Bitmap - 15 FPS
+\end{itemize}
+\end{frame}
+\begin{frame}{Loaders}
+FacelookCA supports the run length encoded standard for cellular automata
+storage. In addition, the framework lets you easily extend its built in file
+parsing functionality through a simple and easy to grasp interface.
+\end{frame}
+\begin{frame}{Built in functionality}
+FacelookCA has most of the functionality that you need to run a cellular
+automata built in. It already includes a renderer for a two state automaton, and
+a built-in importer for the MCell format for Game of Life like automata.
+\end{frame}
+\end{document}

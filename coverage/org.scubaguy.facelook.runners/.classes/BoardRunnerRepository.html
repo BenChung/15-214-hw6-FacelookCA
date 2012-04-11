@@ -1,0 +1,138 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: BoardRunnerRepository</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">org.scubaguy.facelook.runners</a> ]
+</div>
+
+<h1>Coverage Summary for Class: BoardRunnerRepository (org.scubaguy.facelook.runners)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">BoardRunnerRepository</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (16/ 16)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package org.scubaguy.facelook.runners;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.scubaguy.facelook.core.CellularAutomata;
+<i>4</i>&nbsp;import org.scubaguy.facelook.automata.runners.MTBoardRunner;
+<i>5</i>&nbsp;import org.scubaguy.facelook.automata.runners.SimpleRunner;
+<i>6</i>&nbsp;import org.scubaguy.facelook.rules.Rule;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;import java.util.PriorityQueue;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;/**
+<i>11</i>&nbsp; * Stores factories for all BoardRunners, and creates new BoardRunners on demand.
+<i>12</i>&nbsp; * @author Benjamin Chung, Hank Zwally, Cory Williams
+<i>13</i>&nbsp; */
+<i>14</i>&nbsp;public class BoardRunnerRepository {
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    private static BoardRunnerRepository instance;
+<i>18</i>&nbsp;    public static BoardRunnerRepository getInstance() {
+<b class="fc"><i>19</i>&nbsp;        if (instance == null)</b>
+<b class="fc"><i>20</i>&nbsp;            instance = new BoardRunnerRepository();</b>
+<b class="fc"><i>21</i>&nbsp;        return instance;</b>
+<i>22</i>&nbsp;    }
+<i>23</i>&nbsp;    
+<b class="fc"><i>24</i>&nbsp;    public PriorityQueue&lt;RunnerFactory&gt; runners = new PriorityQueue&lt;RunnerFactory&gt;(10, new RunnerComparator());</b>
+<i>25</i>&nbsp;
+<b class="fc"><i>26</i>&nbsp;    private BoardRunnerRepository() {</b>
+<b class="fc"><i>27</i>&nbsp;        runners.add(SimpleRunner.getFactory());</b>
+<b class="fc"><i>28</i>&nbsp;        runners.add(MTBoardRunner.getFactory());</b>
+<b class="fc"><i>29</i>&nbsp;    }</b>
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    /**
+<i>32</i>&nbsp;     * Add a runner factory to create runners to execute automata. The potential runners will be tested in the order they are passed in, and the first runner that is successful is the one that will be used.
+<i>33</i>&nbsp;     *
+<i>34</i>&nbsp;     * @param runner The runner factory to add
+<i>35</i>&nbsp;     */
+<i>36</i>&nbsp;    public void addRunnerFactory(RunnerFactory runner) {
+<b class="fc"><i>37</i>&nbsp;        if (runner == null)</b>
+<b class="fc"><i>38</i>&nbsp;            throw new IllegalArgumentException(&quot;Runner null&quot;);</b>
+<b class="fc"><i>39</i>&nbsp;        runners.add(runner);</b>
+<b class="fc"><i>40</i>&nbsp;    }</b>
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;    /**
+<i>43</i>&nbsp;     * Creates a new runner for the given rule. Returns null if no runner is found.
+<i>44</i>&nbsp;     * @param ca The cellular automaton to bind
+<i>45</i>&nbsp;     * @param rule The rule to create a Runner for
+<i>46</i>&nbsp;     * @return THe created Runner.
+<i>47</i>&nbsp;     */
+<i>48</i>&nbsp;    public BoardRunner getRunnerForRule(CellularAutomata ca, Rule rule) {
+<b class="fc"><i>49</i>&nbsp;        for (RunnerFactory factory : runners) {</b>
+<b class="fc"><i>50</i>&nbsp;            if (factory.isSuitable(rule))</b>
+<b class="fc"><i>51</i>&nbsp;                return factory.buildRunner(ca, rule);</b>
+<i>52</i>&nbsp;        }
+<b class="fc"><i>53</i>&nbsp;        return null;</b>
+<i>54</i>&nbsp;    }
+<i>55</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2012-04-02 08:16</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,432 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CADialog</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">org.scubaguy.facelook.UI</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CADialog (org.scubaguy.facelook.UI)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CADialog</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 49)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">CADialog$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 9)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">CADialog$1$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 3)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">CADialog$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 3)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">CADialog$3</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 3)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">CADialog$4</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 3)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">CADialog$CARunner</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 19)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">CADialog$DummyView</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 26)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 90)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><b class="nc"><i>1</i>&nbsp;package org.scubaguy.facelook.UI;</b>
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.scubaguy.facelook.core.CellularAutomata;
+<i>4</i>&nbsp;import org.scubaguy.facelook.UI.views.View;
+<i>5</i>&nbsp;import org.scubaguy.facelook.UI.views.ViewManager;
+<i>6</i>&nbsp;import org.scubaguy.facelook.boards.EditableBoard;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;import javax.swing.*;
+<i>9</i>&nbsp;import java.awt.*;
+<i>10</i>&nbsp;import java.awt.event.ActionEvent;
+<i>11</i>&nbsp;import java.lang.reflect.InvocationTargetException;
+<i>12</i>&nbsp;import java.util.LinkedList;
+<i>13</i>&nbsp;import java.util.concurrent.atomic.AtomicInteger;
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;/**
+<i>16</i>&nbsp; * Created by IntelliJ IDEA.
+<i>17</i>&nbsp; * User: Ben Chung
+<i>18</i>&nbsp; * Date: 3/22/12
+<i>19</i>&nbsp; * Time: 5:20 AM
+<i>20</i>&nbsp; * To change this template use File | Settings | File Templates.
+<i>21</i>&nbsp; */
+<i>22</i>&nbsp;public class CADialog {
+<i>23</i>&nbsp;    private JPanel panel1;
+<b class="nc"><i>24</i>&nbsp;    private View CAPanel1;</b>
+<i>25</i>&nbsp;    private JButton stepButton;
+<i>26</i>&nbsp;    private JButton startButton;
+<i>27</i>&nbsp;    private JButton stopButton;
+<b class="nc"><i>28</i>&nbsp;    private CellularAutomata ca;</b>
+<i>29</i>&nbsp;    private CellRenderer renderer;
+<b class="nc"><i>30</i>&nbsp;    private CARunner runner;</b>
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    /**
+<i>33</i>&nbsp;     * Method generated by IntelliJ IDEA GUI Designer
+<i>34</i>&nbsp;     * &gt;&gt;&gt; IMPORTANT!! &lt;&lt;&lt;
+<i>35</i>&nbsp;     * DO NOT edit this method OR call it in your code!
+<i>36</i>&nbsp;     *
+<i>37</i>&nbsp;     * @noinspection ALL
+<i>38</i>&nbsp;     */
+<i>39</i>&nbsp;    private void $$$setupUI$$$() {
+<b class="nc"><i>40</i>&nbsp;        createUIComponents();</b>
+<b class="nc"><i>41</i>&nbsp;        panel1 = new JPanel();</b>
+<b class="nc"><i>42</i>&nbsp;        panel1.setLayout(new BorderLayout(0, 0));</b>
+<b class="nc"><i>43</i>&nbsp;        panel1.add(CAPanel1, BorderLayout.CENTER);</b>
+<b class="nc"><i>44</i>&nbsp;        final JPanel panel2 = new JPanel();</b>
+<b class="nc"><i>45</i>&nbsp;        panel2.setLayout(new GridBagLayout());</b>
+<b class="nc"><i>46</i>&nbsp;        panel1.add(panel2, BorderLayout.SOUTH);</b>
+<b class="nc"><i>47</i>&nbsp;        stepButton = new JButton();</b>
+<b class="nc"><i>48</i>&nbsp;        stepButton.setText(&quot;Step&quot;);</b>
+<i>49</i>&nbsp;        GridBagConstraints gbc;
+<b class="nc"><i>50</i>&nbsp;        gbc = new GridBagConstraints();</b>
+<b class="nc"><i>51</i>&nbsp;        gbc.gridx = 0;</b>
+<b class="nc"><i>52</i>&nbsp;        gbc.gridy = 0;</b>
+<b class="nc"><i>53</i>&nbsp;        gbc.fill = GridBagConstraints.HORIZONTAL;</b>
+<b class="nc"><i>54</i>&nbsp;        panel2.add(stepButton, gbc);</b>
+<b class="nc"><i>55</i>&nbsp;        stopButton = new JButton();</b>
+<b class="nc"><i>56</i>&nbsp;        stopButton.setText(&quot;Stop&quot;);</b>
+<b class="nc"><i>57</i>&nbsp;        gbc = new GridBagConstraints();</b>
+<b class="nc"><i>58</i>&nbsp;        gbc.gridx = 2;</b>
+<b class="nc"><i>59</i>&nbsp;        gbc.gridy = 0;</b>
+<b class="nc"><i>60</i>&nbsp;        gbc.fill = GridBagConstraints.HORIZONTAL;</b>
+<b class="nc"><i>61</i>&nbsp;        panel2.add(stopButton, gbc);</b>
+<b class="nc"><i>62</i>&nbsp;        startButton = new JButton();</b>
+<b class="nc"><i>63</i>&nbsp;        startButton.setText(&quot;Start&quot;);</b>
+<b class="nc"><i>64</i>&nbsp;        gbc = new GridBagConstraints();</b>
+<b class="nc"><i>65</i>&nbsp;        gbc.gridx = 1;</b>
+<b class="nc"><i>66</i>&nbsp;        gbc.gridy = 0;</b>
+<b class="nc"><i>67</i>&nbsp;        gbc.fill = GridBagConstraints.HORIZONTAL;</b>
+<b class="nc"><i>68</i>&nbsp;        panel2.add(startButton, gbc);</b>
+<i>69</i>&nbsp;    }
+<i>70</i>&nbsp;
+<i>71</i>&nbsp;    /**
+<i>72</i>&nbsp;     * @noinspection ALL
+<i>73</i>&nbsp;     */
+<i>74</i>&nbsp;    public JComponent $$$getRootComponent$$$() {
+<b class="nc"><i>75</i>&nbsp;        return panel1;</b>
+<i>76</i>&nbsp;    }
+<i>77</i>&nbsp;
+<i>78</i>&nbsp;    private static class DummyView extends View {
+<i>79</i>&nbsp;        public DummyView() {
+<b class="nc"><i>80</i>&nbsp;            super(null);</b>
+<i>81</i>&nbsp;        }
+<i>82</i>&nbsp;
+<i>83</i>&nbsp;        @Override
+<i>84</i>&nbsp;        public void draw(EditableBoard b) {
+<i>85</i>&nbsp;            //To change body of implemented methods use File | Settings | File Templates.
+<i>86</i>&nbsp;        }
+<i>87</i>&nbsp;    }
+<i>88</i>&nbsp;
+<b class="nc"><i>89</i>&nbsp;    public CADialog(CellularAutomata ca, CellRenderer renderer) {</b>
+<b class="nc"><i>90</i>&nbsp;        runner = new CARunner(ca);</b>
+<i>91</i>&nbsp;
+<b class="nc"><i>92</i>&nbsp;        this.ca = ca;</b>
+<b class="nc"><i>93</i>&nbsp;        this.renderer = renderer;</b>
+<b class="nc"><i>94</i>&nbsp;        CAPanel1 = ViewManager.getInstance().getViewForRenderer(renderer);</b>
+<i>95</i>&nbsp;
+<b class="nc"><i>96</i>&nbsp;        CAPanel1.repaint();</b>
+<i>97</i>&nbsp;
+<b class="nc"><i>98</i>&nbsp;        $$$setupUI$$$();</b>
+<i>99</i>&nbsp;    }
+<i>100</i>&nbsp;
+<i>101</i>&nbsp;    private void createUIComponents() {
+<i>102</i>&nbsp;    }
+<i>103</i>&nbsp;
+<i>104</i>&nbsp;    public void show() {
+<b class="nc"><i>105</i>&nbsp;        runner.registerTickListener(new CARunner.TickListener() {</b>
+<i>106</i>&nbsp;            @Override
+<i>107</i>&nbsp;            public void onTick() {
+<i>108</i>&nbsp;                try {
+<b class="nc"><i>109</i>&nbsp;                    if (!SwingUtilities.isEventDispatchThread())</b>
+<b class="nc"><i>110</i>&nbsp;                        SwingUtilities.invokeAndWait(new Runnable() {</b>
+<i>111</i>&nbsp;                            @Override
+<i>112</i>&nbsp;                            public void run() {
+<b class="nc"><i>113</i>&nbsp;                                CAPanel1.draw(ca.getTop());</b>
+<i>114</i>&nbsp;                            }
+<i>115</i>&nbsp;                        });
+<i>116</i>&nbsp;                    else
+<b class="nc"><i>117</i>&nbsp;                        CAPanel1.draw(ca.getTop());</b>
+<b class="nc"><i>118</i>&nbsp;                } catch (InterruptedException e) {</b>
+<b class="nc"><i>119</i>&nbsp;                    throw new RuntimeException(e);</b>
+<b class="nc"><i>120</i>&nbsp;                } catch (InvocationTargetException e) {</b>
+<b class="nc"><i>121</i>&nbsp;                    throw new RuntimeException(e);</b>
+<i>122</i>&nbsp;                }
+<i>123</i>&nbsp;            }
+<i>124</i>&nbsp;        });
+<i>125</i>&nbsp;
+<b class="nc"><i>126</i>&nbsp;        stepButton.addActionListener(new AbstractAction() {</b>
+<i>127</i>&nbsp;            @Override
+<i>128</i>&nbsp;            public void actionPerformed(ActionEvent e) {
+<b class="nc"><i>129</i>&nbsp;                runner.tick();</b>
+<i>130</i>&nbsp;            }
+<i>131</i>&nbsp;        });
+<i>132</i>&nbsp;
+<b class="nc"><i>133</i>&nbsp;        startButton.addActionListener(new AbstractAction() {</b>
+<i>134</i>&nbsp;            @Override
+<i>135</i>&nbsp;            public void actionPerformed(ActionEvent e) {
+<b class="nc"><i>136</i>&nbsp;                runner.tick(-2);</b>
+<i>137</i>&nbsp;            }
+<i>138</i>&nbsp;        });
+<i>139</i>&nbsp;
+<b class="nc"><i>140</i>&nbsp;        stopButton.addActionListener(new AbstractAction() {</b>
+<i>141</i>&nbsp;            @Override
+<i>142</i>&nbsp;            public void actionPerformed(ActionEvent e) {
+<b class="nc"><i>143</i>&nbsp;                runner.stop();</b>
+<i>144</i>&nbsp;            }
+<i>145</i>&nbsp;        });
+<i>146</i>&nbsp;
+<b class="nc"><i>147</i>&nbsp;        CAPanel1.draw(ca.getTop());</b>
+<i>148</i>&nbsp;
+<b class="nc"><i>149</i>&nbsp;        JFrame frame = new JFrame(&quot;Cellular Automata&quot;);</b>
+<b class="nc"><i>150</i>&nbsp;        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</b>
+<b class="nc"><i>151</i>&nbsp;        frame.add(panel1);</b>
+<b class="nc"><i>152</i>&nbsp;        frame.pack();</b>
+<b class="nc"><i>153</i>&nbsp;        frame.setVisible(true);</b>
+<i>154</i>&nbsp;    }
+<i>155</i>&nbsp;
+<i>156</i>&nbsp;    private static class CARunner implements Runnable {
+<i>157</i>&nbsp;        private CellularAutomata ca;
+<b class="nc"><i>158</i>&nbsp;        private AtomicInteger ticks = new AtomicInteger(0);</b>
+<i>159</i>&nbsp;
+<b class="nc"><i>160</i>&nbsp;        public CARunner(CellularAutomata ca) {</b>
+<i>161</i>&nbsp;
+<b class="nc"><i>162</i>&nbsp;            this.ca = ca;</b>
+<i>163</i>&nbsp;        }
+<i>164</i>&nbsp;
+<i>165</i>&nbsp;        public void tick() {
+<b class="nc"><i>166</i>&nbsp;            ca.tick();</b>
+<b class="nc"><i>167</i>&nbsp;            triggerListeners();</b>
+<i>168</i>&nbsp;        }
+<i>169</i>&nbsp;
+<i>170</i>&nbsp;        private void triggerListeners() {
+<b class="nc"><i>171</i>&nbsp;            for (TickListener listener : listeners)</b>
+<b class="nc"><i>172</i>&nbsp;                listener.onTick();</b>
+<i>173</i>&nbsp;        }
+<i>174</i>&nbsp;
+<i>175</i>&nbsp;        public void tick(int n) {
+<b class="nc"><i>176</i>&nbsp;            if (ticks.get() &gt; 0)</b>
+<i>177</i>&nbsp;                return;
+<b class="nc"><i>178</i>&nbsp;            ticks.set(n);</b>
+<i>179</i>&nbsp;
+<b class="nc"><i>180</i>&nbsp;            new Thread(this).start();</b>
+<i>181</i>&nbsp;        }
+<i>182</i>&nbsp;
+<i>183</i>&nbsp;        public void stop() {
+<b class="nc"><i>184</i>&nbsp;            ticks.set(0);</b>
+<b class="nc"><i>185</i>&nbsp;            triggerListeners();</b>
+<i>186</i>&nbsp;        }
+<i>187</i>&nbsp;
+<i>188</i>&nbsp;        @Override
+<i>189</i>&nbsp;        public void run() {
+<b class="nc"><i>190</i>&nbsp;            while (ticks.get() &gt; 0 || ticks.get() == -2) {</b>
+<b class="nc"><i>191</i>&nbsp;                ca.tick();</b>
+<b class="nc"><i>192</i>&nbsp;                triggerListeners();</b>
+<i>193</i>&nbsp;
+<b class="nc"><i>194</i>&nbsp;                if (ticks.get() != -2)</b>
+<b class="nc"><i>195</i>&nbsp;                    ticks.decrementAndGet();</b>
+<i>196</i>&nbsp;            }
+<i>197</i>&nbsp;        }
+<i>198</i>&nbsp;
+<b class="nc"><i>199</i>&nbsp;        private LinkedList&lt;TickListener&gt; listeners = new LinkedList&lt;TickListener&gt;();</b>
+<i>200</i>&nbsp;
+<i>201</i>&nbsp;        public void registerTickListener(TickListener listener) {
+<b class="nc"><i>202</i>&nbsp;            listeners.add(listener);</b>
+<i>203</i>&nbsp;        }
+<i>204</i>&nbsp;
+<i>205</i>&nbsp;        public interface TickListener {
+<i>206</i>&nbsp;            public void onTick();
+<i>207</i>&nbsp;        }
+<i>208</i>&nbsp;    }
+<i>209</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2012-04-01 22:21</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: ViewManager</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">org.scubaguy.facelook.UI.views</a> ]
+</div>
+
+<h1>Coverage Summary for Class: ViewManager (org.scubaguy.facelook.UI.views)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ViewManager</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    93.8%
+  </span>
+  <span class="absValue">
+    (15/ 16)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package org.scubaguy.facelook.UI.views;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.scubaguy.facelook.UI.CellRenderer;
+<i>4</i>&nbsp;import org.scubaguy.facelook.automata.views.BitmapView;
+<i>5</i>&nbsp;import org.scubaguy.facelook.automata.views.SwingView;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;import java.util.LinkedList;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;/**
+<i>10</i>&nbsp; * Manages the available types of views to display the cellular automata
+<i>11</i>&nbsp; * @author Benjamin Chung, Hank Zwally, Cory Williams
+<i>12</i>&nbsp; */
+<i>13</i>&nbsp;public final class ViewManager {
+<i>14</i>&nbsp;    private static ViewManager instance;
+<i>15</i>&nbsp;    public static ViewManager getInstance() {
+<b class="fc"><i>16</i>&nbsp;        if (instance == null)</b>
+<b class="fc"><i>17</i>&nbsp;            instance = new ViewManager();</b>
+<b class="fc"><i>18</i>&nbsp;        return instance;</b>
+<i>19</i>&nbsp;    }
+<b class="fc"><i>20</i>&nbsp;    private ViewManager() {</b>
+<b class="fc"><i>21</i>&nbsp;        addView(SwingView.getFactory());</b>
+<b class="fc"><i>22</i>&nbsp;        addView(BitmapView.getFactory());</b>
+<b class="fc"><i>23</i>&nbsp;    }</b>
+<i>24</i>&nbsp;                             
+<b class="fc"><i>25</i>&nbsp;    private LinkedList&lt;ViewFactory&gt; factories = new LinkedList&lt;ViewFactory&gt;();</b>
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    public void addView(ViewFactory view) {
+<b class="fc"><i>28</i>&nbsp;        if (view == null)</b>
+<b class="fc"><i>29</i>&nbsp;            throw new IllegalArgumentException();</b>
+<b class="fc"><i>30</i>&nbsp;        factories.add(view);</b>
+<b class="fc"><i>31</i>&nbsp;    }</b>
+<i>32</i>&nbsp;
+<i>33</i>&nbsp;    public View getViewForRenderer(CellRenderer renderer) {
+<b class="fc"><i>34</i>&nbsp;        for (ViewFactory factory : factories) {</b>
+<b class="fc"><i>35</i>&nbsp;            if (factory.canDisplay(renderer))</b>
+<b class="fc"><i>36</i>&nbsp;                return factory.getView(renderer);</b>
+<i>37</i>&nbsp;        }
+<b class="nc"><i>38</i>&nbsp;        throw new RuntimeException(&quot;No view avaliable for the renderer&quot;);</b>
+<i>39</i>&nbsp;    }
+<i>40</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2012-04-02 08:16</div>
+</div>
+</body>
+</html>

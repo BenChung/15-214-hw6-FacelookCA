@@ -1,0 +1,51 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{color}
+ \usepackage{float}
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+numbers=left,
+numberstyle=\small\color{black},
+stepnumber=1,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+
+\title{FacelookCA - The next generation of Cellular Automata - Specification}
+\author{Benjamin Chung}%more
+\begin{document}
+\maketitle
+The FacelookCA framework is designed to be fast, flexible, and extendable. 
+Towards these objectives, it has 3 features that go above and beyond a simple CA
+framework.
+\section{Speed}
+FacelookCA uses two kinds of runners, a simple single-threaded runner, and a
+multithreaded one. The determination as to which to use is left up to the Rule
+author. In addition, future plans include the construction of a GPGPU runner to
+allow certian types of rule to be executed on the GPU.
+\section{Flexibillity}
+FacelookCA is highly flexible in terms of the kind of rules that one can create.
+As the board system it uses uses 32 bit integer values for storage, a
+signifigant amount of state data can be stored in each cell. Langdon's ant and
+wireworld CA systems are trivial and multithreadable thanks to this.
+\section{Extendable}
+FacelookCA is extremely extendable, as almost everything can be altered or added
+by the client. Rules and Renderers are plugin modifyable, and
+the framework can use them like ones created internally.
+\end{document}
